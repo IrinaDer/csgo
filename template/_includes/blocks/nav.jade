@@ -1,0 +1,57 @@
+mixin nav(data)
+	nav.nav
+		.nav__list
+			.nav__list-trigger.visible-xs
+				button.btn.btn-gray
+					span.btn-gray__topleft
+					span.btn-gray__bottomright
+					| МЕНЮ
+					i.zmdi.zmdi-menu
+			ul.reset-list
+				if (data == 1)
+					li.active: a(href="#")
+						span Кейсы
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+				else
+					li: a(href="#")
+						span Кейсы
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+
+				if (data == 2)
+					li.active: a(href="#")
+						span Гранаты
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+				else
+					li: a(href="#")
+						span Гранаты
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+
+				if (data == 3)
+					li.active: a(href="#")
+						span FAQ
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+				else
+					li: a(href="#")
+						span FAQ
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+
+				if (data == 4)
+					li.active: a(href="#")
+						span Поддержка
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+				else
+					li: a(href="#")
+						span Поддержка
+						span.btn-gray__topleft
+						span.btn-gray__bottomright
+		.nav__lang
+			a(href="#").active RU
+			| /
+			a(href="#") EN

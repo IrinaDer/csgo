@@ -1,0 +1,33 @@
+include _includes/mixins
+extends layout/main.jade
+block body
+	body
+		include _includes/svg.jade
+		include _includes/blocks/sidebar.jade
+		include _includes/blocks/dropside.jade
+		include _includes/blocks/nav.jade
+		include _includes/blocks/mainPromo.jade
+		include _includes/blocks/mainAdvs.jade
+		include _includes/blocks/footer.jade
+		include _includes/blocks/casepage.jade
+
+		.page-wrapp
+			+sidebar()
+			+dropside()
+			.page-content.main-page
+				.content-without-footer
+					.container
+						+nav(1)
+						+mainPromo()
+						//- +casepage()
+				.footer-wrap
+					.container
+						+mainAdvs()
+						+footer()
+
+
+
+		//- +modals()
+
+		// scripts
+		script(data-main="js/main" src='js/require.js')
